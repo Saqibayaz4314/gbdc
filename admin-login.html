@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | GBDC Jacobabad</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/png" href="images/college-logo.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .admin-login-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: calc(100vh - 80px);
+            margin-top: 80px;
+            background: linear-gradient(135deg, rgba(0, 100, 0, 0.1), rgba(0, 128, 0, 0.1));
+            padding: 20px;
+        }
+        
+        .admin-login-card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .admin-login-logo {
+            margin-bottom: 30px;
+        }
+        
+        .admin-login-logo img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+        
+        .admin-login-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+        }
+        
+        .admin-login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .form-group {
+            position: relative;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 100, 0, 0.1);
+            outline: none;
+        }
+        
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 40px;
+            cursor: pointer;
+            color: #777;
+        }
+        
+        .remember-me {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        
+        .remember-me input {
+            margin-right: 8px;
+        }
+        
+        .login-btn {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+        
+        .login-btn:hover {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 100, 0, 0.2);
+        }
+        
+        .admin-login-footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .admin-login-footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .admin-login-footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .alert {
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        
+        .alert-danger {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-left">
+                <img src="images/sindh-logo.png" alt="Government of Sindh Logo">
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="faculty.html">Faculty</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="admission.html">Admission</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" class="student-portal-btn"><i class="fas fa-user-graduate"></i> Student Portal</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+            <div class="logo-right">
+                <img src="images/college-logo.png" alt="Government Boys Degree College Jacobabad Logo">
+            </div>
+        </div>
+    </header>
+
+    <!-- Admin Login Container -->
+    <div class="admin-login-container">
+        <div class="admin-login-card">
+            <div class="admin-login-logo">
+                <img src="images/college-logo.png" alt="GBDC Jacobabad Logo">
+            </div>
+            <div class="admin-login-title">
+                Admin Panel Login
+            </div>
+            <div class="alert alert-danger" id="errorAlert">
+                Invalid username or password. Please try again.
+            </div>
+            <div class="alert alert-success" id="successAlert">
+                Login successful! Redirecting to admin panel...
+            </div>
+            <form class="admin-login-form" id="adminLoginForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <i class="fas fa-eye password-toggle" id="passwordToggle"></i>
+                </div>
+                <div class="remember-me">
+                    <input type="checkbox" id="rememberMe" name="rememberMe">
+                    <label for="rememberMe">Remember me</label>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+            <div class="admin-login-footer">
+                <p>Forgot your password? <a href="#">Reset Password</a></p>
+                <p>Return to <a href="index.html">Website</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2023 Government Boys Degree College Jacobabad. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/admin-auth.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const passwordToggle = document.getElementById('passwordToggle');
+            const passwordInput = document.getElementById('password');
+            
+            // Toggle password visibility
+            passwordToggle.addEventListener('click', function() {
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    passwordToggle.classList.remove('fa-eye');
+                    passwordToggle.classList.add('fa-eye-slash');
+                } else {
+                    passwordInput.type = 'password';
+                    passwordToggle.classList.remove('fa-eye-slash');
+                    passwordToggle.classList.add('fa-eye');
+                }
+            });
+            
+            // Check for session expired parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('session_expired')) {
+                const errorAlert = document.getElementById('errorAlert');
+                if (errorAlert) {
+                    errorAlert.innerHTML = 'Your session has expired. Please log in again.';
+                    errorAlert.style.display = 'block';
+                }
+            }
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | GBDC Jacobabad</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/dynamic-content.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/png" href="images/college-logo.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-left">
+                <img src="images/sindh-logo.png" alt="Government of Sindh Logo">
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="faculty.html">Faculty</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="admission.html">Admission</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="admin.html" class="student-portal-btn active"><i class="fas fa-user-shield"></i> Admin</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+            <div class="logo-right">
+                <img src="images/college-logo.png" alt="Government Boys Degree College Jacobabad Logo">
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn"></button>
+    
+    <!-- Admin Dashboard -->
+    <div class="admin-container">
+        <div class="admin-sidebar" id="adminSidebar">
+            <div class="admin-profile">
+                <img src="images/admin/admin-avatar.jpg" alt="Admin Avatar">
+                <h3>Admin Panel</h3>
+                <p>GBDC Jacobabad</p>
+            </div>
+            <ul class="admin-menu">
+                <li class="active" data-tab="dashboard"><a href="#dashboard"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a></li>
+                <li data-tab="gallery"><a href="#gallery"><i class="fas fa-images"></i> <span>Gallery Management</span></a></li>
+                <li data-tab="faculty"><a href="#faculty"><i class="fas fa-chalkboard-teacher"></i> <span>Faculty Management</span></a></li>
+                <li data-tab="events"><a href="#events"><i class="fas fa-calendar-alt"></i> <span>Events Management</span></a></li>
+                <li data-tab="programs"><a href="#programs"><i class="fas fa-graduation-cap"></i> <span>Programs Management</span></a></li>
+                <li data-tab="admissions"><a href="#admissions"><i class="fas fa-user-graduate"></i> <span>Admission Applications</span></a></li>
+                <li data-tab="settings"><a href="#settings"><i class="fas fa-cog"></i> <span>Settings</span></a></li>
+                <li data-tab="logout"><a href="#logout"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a></li>
+            </ul>
+        </div>
+        <div class="admin-content">
+            <!-- Dashboard Tab -->
+            <div class="admin-tab active" id="dashboard">
+                <h2>Dashboard</h2>
+                <div class="admin-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>5,243</h3>
+                            <p>Total Students</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>75</h3>
+                            <p>Faculty Members</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>148</h3>
+                            <p>New Applications</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-images"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>86</h3>
+                            <p>Gallery Items</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="recent-activities">
+                    <h3>Recent Activities</h3>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h4>New Admission Application</h4>
+                                <p>Student Name: Ahmed Ali</p>
+                                <span class="activity-time">2 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-image"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h4>Gallery Updated</h4>
+                                <p>Added 5 new images to Campus Gallery</p>
+                                <span class="activity-time">5 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-user-edit"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h4>Faculty Information Updated</h4>
+                                <p>Updated information for Dr. Khalid Hussain</p>
+                                <span class="activity-time">Yesterday</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-calendar-plus"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h4>New Event Added</h4>
+                                <p>Annual Sports Day scheduled for August 25th</p>
+                                <span class="activity-time">2 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gallery Management Tab -->
+            <div class="admin-tab" id="gallery">
+                <h2>Gallery Management</h2>
+                <div class="admin-actions">
+                    <button class="admin-btn"><i class="fas fa-plus"></i> Add New Image</button>
+                    <button class="admin-btn"><i class="fas fa-plus"></i> Add New Video</button>
+                    <div class="admin-search">
+                        <input type="text" placeholder="Search gallery items...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="gallery-management">
+                    <div class="gallery-filters">
+                        <button class="filter-btn active" data-filter="all">All Items</button>
+                        <button class="filter-btn" data-filter="images">Images</button>
+                        <button class="filter-btn" data-filter="videos">Videos</button>
+                        <button class="filter-btn" data-filter="campus">Campus</button>
+                        <button class="filter-btn" data-filter="events">Events</button>
+                        <button class="filter-btn" data-filter="students">Students</button>
+                    </div>
+                    <div class="gallery-grid">
+                        <div class="gallery-item" data-type="images campus">
+                            <div class="gallery-item-image">
+                                <img src="images/gallery/gallery1.jpg" alt="Campus Building">
+                            </div>
+                            <div class="gallery-item-info">
+                                <h4>Campus Main Building</h4>
+                                <p>Uploaded: 05/06/2023</p>
+                            </div>
+                            <div class="gallery-item-actions">
+                                <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                                <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-type="images events">
+                            <div class="gallery-item-image">
+                                <img src="images/gallery/gallery2.jpg" alt="Library">
+                            </div>
+                            <div class="gallery-item-info">
+                                <h4>College Library</h4>
+                                <p>Uploaded: 12/05/2023</p>
+                            </div>
+                            <div class="gallery-item-actions">
+                                <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                                <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-type="images campus">
+                            <div class="gallery-item-image">
+                                <img src="images/gallery/gallery3.jpg" alt="Computer Lab">
+                            </div>
+                            <div class="gallery-item-info">
+                                <h4>Computer Laboratory</h4>
+                                <p>Uploaded: 18/04/2023</p>
+                            </div>
+                            <div class="gallery-item-actions">
+                                <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                                <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        <div class="gallery-item" data-type="videos events">
+                            <div class="gallery-item-image video">
+                                <img src="images/gallery/gallery4.jpg" alt="Science Lab">
+                                <div class="video-icon"><i class="fas fa-play"></i></div>
+                            </div>
+                            <div class="gallery-item-info">
+                                <h4>Science Exhibition Video</h4>
+                                <p>Uploaded: 20/03/2023</p>
+                            </div>
+                            <div class="gallery-item-actions">
+                                <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                                <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pagination">
+                        <button><i class="fas fa-chevron-left"></i></button>
+                        <button class="active">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Faculty Management Tab -->
+            <div class="admin-tab" id="faculty">
+                <h2>Faculty Management</h2>
+                <div class="admin-actions">
+                    <button class="admin-btn"><i class="fas fa-plus"></i> Add New Faculty Member</button>
+                    <div class="admin-search">
+                        <input type="text" placeholder="Search faculty members...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="faculty-management">
+                    <div class="faculty-filters">
+                        <button class="filter-btn active" data-filter="all">All Departments</button>
+                        <button class="filter-btn" data-filter="science">Science</button>
+                        <button class="filter-btn" data-filter="arts">Arts</button>
+                        <button class="filter-btn" data-filter="commerce">Commerce</button>
+                        <button class="filter-btn" data-filter="it">IT</button>
+                    </div>
+                    <div class="faculty-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Profile</th>
+                                    <th>Name</th>
+                                    <th>Designation</th>
+                                    <th>Department</th>
+                                    <th>Qualification</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-department="science">
+                                    <td><img src="images/faculty/faculty1.jpg" alt="Faculty Member"></td>
+                                    <td>Dr. Khalid Hussain</td>
+                                    <td>Associate Professor</td>
+                                    <td>Physics</td>
+                                    <td>PhD in Physics</td>
+                                    <td>
+                                        <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                                        <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr data-department="arts">
+                                    <td><img src="images/faculty/faculty2.jpg" alt="Faculty Member"></td>
+                                    <td>Prof. Amina Khan</td>
+                                    <td>Assistant Professor</td>
+                                    <td>English</td>
+                                    <td>M.Phil in English Literature</td>
+                                    <td>
+                                        <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                                        <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr data-department="commerce">
+                                    <td><img src="images/faculty/faculty3.jpg" alt="Faculty Member"></td>
+                                    <td>Prof. Zahid Ali</td>
+                                    <td>Assistant Professor</td>
+                                    <td>Commerce</td>
+                                    <td>MBA, M.Com</td>
+                                    <td>
+                                        <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                                        <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr data-department="it">
+                                    <td><img src="images/faculty/faculty4.jpg" alt="Faculty Member"></td>
+                                    <td>Prof. Samina Baloch</td>
+                                    <td>Lecturer</td>
+                                    <td>Computer Science</td>
+                                    <td>MS in Computer Science</td>
+                                    <td>
+                                        <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                                        <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pagination">
+                        <button><i class="fas fa-chevron-left"></i></button>
+                        <button class="active">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Events Management Tab -->
+            <div class="admin-tab" id="events">
+                <h2>Events Management</h2>
+                <div class="admin-actions">
+                    <button class="admin-btn"><i class="fas fa-plus"></i> Add New Event</button>
+                    <div class="admin-search">
+                        <input type="text" placeholder="Search events...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="events-management">
+                    <div class="events-filters">
+                        <button class="filter-btn active" data-filter="all">All Events</button>
+                        <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+                        <button class="filter-btn" data-filter="past">Past</button>
+                    </div>
+                    <div class="events-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Event</th>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Location</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-status="upcoming">
+                                    <td>Independence Day Celebration</td>
+                                    <td>August 15, 2023</td>
+                                    <td>9:00 AM - 1:00 PM</td>
+                                    <td>College Auditorium</td>
+                                    <td><span class="status upcoming">Upcoming</span></td>
+                                    <td>
+                                        <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                                        <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr data-status="upcoming">
+                                    <td>Annual Sports Day</td>
+                                    <td>August 25, 2023</td>
+                                    <td>8:00 AM - 4:00 PM</td>
+                                    <td>College Grounds</td>
+                                    <td><span class="status upcoming">Upcoming</span></td>
+                                    <td>
+                                        <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                                        <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr data-status="upcoming">
+                                    <td>Science Exhibition</td>
+                                    <td>September 10, 2023</td>
+                                    <td>10:00 AM - 3:00 PM</td>
+                                    <td>Science Block</td>
+                                    <td><span class="status upcoming">Upcoming</span></td>
+                                    <td>
+                                        <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                                        <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr data-status="past">
+                                    <td>Cultural Day</td>
+                                    <td>March 22, 2023</td>
+                                    <td>9:00 AM - 2:00 PM</td>
+                                    <td>College Auditorium</td>
+                                    <td><span class="status past">Past</span></td>
+                                    <td>
+                                        <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                                        <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pagination">
+                        <button><i class="fas fa-chevron-left"></i></button>
+                        <button class="active">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Programs Management Tab -->
+            <div class="admin-tab" id="programs">
+                <h2>Programs Management</h2>
+                <div class="admin-actions">
+                    <button class="admin-btn"><i class="fas fa-plus"></i> Add New Program</button>
+                    <div class="admin-search">
+                        <input type="text" placeholder="Search programs...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="programs-management">
+                    <div class="programs-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Program</th>
+                                    <th>Department</th>
+                                    <th>Duration</th>
+                                    <th>Seats</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Bachelor of Science (Physics)</td>
+                                    <td>Science</td>
+                                    <td>4 Years</td>
+                                    <td>60</td>
+                                    <td><span class="status active">Active</span></td>
+                                    <td>
+                                        <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                                        <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Bachelor of Arts (English)</td>
+                                    <td>Arts</td>
+                                    <td>4 Years</td>
+                                    <td>80</td>
+                                    <td><span class="status active">Active</span></td>
+                                    <td>
+                                        <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                                        <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Bachelor of Commerce</td>
+                                    <td>Commerce</td>
+                                    <td>4 Years</td>
+                                    <td>70</td>
+                                    <td><span class="status active">Active</span></td>
+                                    <td>
+                                        <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                                        <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Bachelor of Computer Science</td>
+                                    <td>Information Technology</td>
+                                    <td>4 Years</td>
+                                    <td>50</td>
+                                    <td><span class="status active">Active</span></td>
+                                    <td>
+                                        <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                                        <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Admission Applications Tab -->
+            <div class="admin-tab" id="admissions">
+                <h2>Admission Applications</h2>
+                <div class="admin-actions">
+                    <div class="admin-search">
+                        <input type="text" placeholder="Search applications...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="application-filters">
+                        <button class="filter-btn active" data-filter="all">All Applications</button>
+                        <button class="filter-btn" data-filter="new">New</button>
+                        <button class="filter-btn" data-filter="review">Under Review</button>
+                        <button class="filter-btn" data-filter="approved">Approved</button>
+                        <button class="filter-btn" data-filter="rejected">Rejected</button>
+                    </div>
+                </div>
+                <div class="applications-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Application ID</th>
+                                <th>Student Name</th>
+                                <th>Program</th>
+                                <th>Application Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-status="new">
+                                <td>APP-2023-001</td>
+                                <td>Ahmed Ali</td>
+                                <td>Bachelor of Science (Physics)</td>
+                                <td>July 15, 2023</td>
+                                <td><span class="status new">New</span></td>
+                                <td>
+                                    <button class="view-btn"><i class="fas fa-eye"></i></button>
+                                    <button class="approve-btn"><i class="fas fa-check"></i></button>
+                                    <button class="reject-btn"><i class="fas fa-times"></i></button>
+                                </td>
+                            </tr>
+                            <tr data-status="review">
+                                <td>APP-2023-002</td>
+                                <td>Fatima Khan</td>
+                                <td>Bachelor of Arts (English)</td>
+                                <td>July 12, 2023</td>
+                                <td><span class="status review">Under Review</span></td>
+                                <td>
+                                    <button class="view-btn"><i class="fas fa-eye"></i></button>
+                                    <button class="approve-btn"><i class="fas fa-check"></i></button>
+                                    <button class="reject-btn"><i class="fas fa-times"></i></button>
+                                </td>
+                            </tr>
+                            <tr data-status="approved">
+                                <td>APP-2023-003</td>
+                                <td>Saeed Hussain</td>
+                                <td>Bachelor of Commerce</td>
+                                <td>July 10, 2023</td>
+                                <td><span class="status approved">Approved</span></td>
+                                <td>
+                                    <button class="view-btn"><i class="fas fa-eye"></i></button>
+                                </td>
+                            </tr>
+                            <tr data-status="rejected">
+                                <td>APP-2023-004</td>
+                                <td>Zainab Bibi</td>
+                                <td>Bachelor of Computer Science</td>
+                                <td>July 08, 2023</td>
+                                <td><span class="status rejected">Rejected</span></td>
+                                <td>
+                                    <button class="view-btn"><i class="fas fa-eye"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination">
+                    <button><i class="fas fa-chevron-left"></i></button>
+                    <button class="active">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            
+            <!-- Settings Tab -->
+            <div class="admin-tab" id="settings">
+                <h2>Website Settings</h2>
+                <div class="settings-section">
+                    <div class="setting-card">
+                        <h3>General Settings</h3>
+                        <form class="settings-form">
+                            <div class="form-group">
+                                <label for="college-name">College Name</label>
+                                <input type="text" id="college-name" value="Government Boys Degree College Jacobabad">
+                            </div>
+                            <div class="form-group">
+                                <label for="college-email">Email Address</label>
+                                <input type="email" id="college-email" value="info@gbdcjacobabad.edu.pk">
+                            </div>
+                            <div class="form-group">
+                                <label for="college-phone">Phone Number</label>
+                                <input type="text" id="college-phone" value="+92-123-4567890">
+                            </div>
+                            <div class="form-group">
+                                <label for="college-address">Address</label>
+                                <textarea id="college-address">College Road, Jacobabad, Sindh, Pakistan</textarea>
+                            </div>
+                            <button type="submit" class="admin-btn">Save Changes</button>
+                        </form>
+                    </div>
+                    <div class="setting-card">
+                        <h3>Social Media Links</h3>
+                        <form class="settings-form">
+                            <div class="form-group">
+                                <label for="facebook">Facebook</label>
+                                <input type="url" id="facebook" value="https://facebook.com/gbdcjacobabad">
+                            </div>
+                            <div class="form-group">
+                                <label for="twitter">Twitter</label>
+                                <input type="url" id="twitter" value="https://twitter.com/gbdcjacobabad">
+                            </div>
+                            <div class="form-group">
+                                <label for="instagram">Instagram</label>
+                                <input type="url" id="instagram" value="https://instagram.com/gbdcjacobabad">
+                            </div>
+                            <div class="form-group">
+                                <label for="linkedin">LinkedIn</label>
+                                <input type="url" id="linkedin" value="https://linkedin.com/in/gbdcjacobabad">
+                            </div>
+                            <button type="submit" class="admin-btn">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Logout Tab -->
+            <div class="admin-tab" id="logout">
+                <h2>Logout</h2>
+                <div class="logout-confirmation">
+                    <p>Are you sure you want to logout from the admin panel?</p>
+                    <div class="logout-actions">
+                        <button class="admin-btn logout-btn">Yes, Logout</button>
+                        <button class="admin-btn cancel-btn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h3>Contact Us</h3>
+                        <ul class="contact-info">
+                            <li><i class="fas fa-map-marker-alt"></i> College Road, Jacobabad, Sindh, Pakistan</li>
+                            <li><i class="fas fa-phone"></i> +92-123-4567890</li>
+                            <li><i class="fas fa-envelope"></i> info@gbdcjacobabad.edu.pk</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="faculty.html">Faculty</a></li>
+                            <li><a href="programs.html">Programs</a></li>
+                            <li><a href="admission.html">Admission</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Important Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="https://www.sindh.gov.pk/" target="_blank">Government of Sindh</a></li>
+                            <li><a href="https://www.hec.gov.pk/" target="_blank">Higher Education Commission</a></li>
+                            <li><a href="https://www.sbte.edu.pk/" target="_blank">Sindh Board of Technical Education</a></li>
+                            <li><a href="https://salu.edu.pk/" target="_blank">Shah Abdul Latif University</a></li>
+                            <li><a href="login.html">Student Portal</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Connect With Us</h3>
+                        <ul class="social-links">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                        <div class="footer-map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.3793430987356!2d68.42987287603752!3d28.28158437559116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39345c1a3e3d04d9%3A0xc7b1f69b2c4ed8da!2sGovernment%20Boys%20Degree%20College%20Jacobabad!5e0!3m2!1sen!2s!4v1693649432018!5m2!1sen!2s" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2023 Government Boys Degree College Jacobabad. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/admin-auth.js"></script>
+    <script src="js/tab-manager.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/file-upload.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/content-sync.js"></script>
+</body>
+</html> 

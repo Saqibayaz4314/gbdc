@@ -1,0 +1,119 @@
+/**
+ * Dynamic Content CSS
+ * 
+ * Styles for dynamic content updates and animations
+ */
+
+/* Updated item highlight effect */
+.updated {
+    animation: highlight-update 2s ease;
+}
+
+@keyframes highlight-update {
+    0%, 100% {
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        box-shadow: 0 5px 25px rgba(26, 109, 51, 0.6);
+    }
+}
+
+/* Gallery item transitions */
+.gallery-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+/* Faculty card transitions */
+.faculty-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+/* Program card transitions */
+.program-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+/* Event card transitions */
+.event-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+/* Content update notification */
+.content-update-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color, #1a6d33);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    max-width: 300px;
+}
+
+.content-update-notification.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.content-update-notification.hide {
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+/* Mobile overlay for sidebar */
+.mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mobile-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (min-width: 769px) {
+    .mobile-overlay {
+        display: none;
+    }
+}
+
+/* Preview container for file uploads */
+.preview-container {
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.media-preview img, 
+.faculty-preview img, 
+.event-preview img {
+    max-width: 100%;
+    max-height: 200px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.media-preview video {
+    max-width: 100%;
+    max-height: 200px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+} 
