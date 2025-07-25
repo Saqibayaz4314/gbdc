@@ -32,63 +32,7 @@ A modern, responsive website for Government Boys Degree College Jacobabad, featu
 - **Font Awesome**: Icons for enhanced visual appeal
 - **Google Fonts**: Typography with Poppins font family
 
-## Installation and Setup
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/yourusername/gbdc-jacobabad.git
-   ```
-
-2. Set up a local server environment (XAMPP, WAMP, MAMP, etc.)
-
-3. Import the database:
-   ```
-   mysql -u username -p database_name < database.sql
-   ```
-
-4. Configure database connection in `php/config.php`
-
-5. Access the website through your local server
-
-## Project Structure
-
-```
-├── index.html              # Home page
-├── about.html              # About page
-├── faculty.html            # Faculty page
-├── programs.html           # Programs page
-├── admission.html          # Admission page
-├── gallery.html            # Gallery page
-├── contact.html            # Contact page
-├── login.html              # Student login page
-├── register.html           # Student registration page
-├── forgot-password.html    # Password recovery page
-├── student-dashboard.php   # Student dashboard
-├── css/
-│   └── styles.css          # Main stylesheet
-├── js/
-│   └── script.js           # Main JavaScript file
-├── php/
-│   ├── config.php          # Database configuration
-│   ├── contact.php         # Contact form handler
-│   ├── login.php           # Login handler
-│   ├── register.php        # Registration handler
-│   └── subscribe.php       # Newsletter subscription handler
-├── images/                 # Image assets
-│   ├── gallery/            # Gallery images
-│   └── faculty/            # Faculty member photos
-└── database.sql            # Database structure and sample data
-```
-
-## Customization
-
-To customize the website for your institution:
-
-1. Replace logo images in the `images` directory
-2. Update content in HTML files to reflect your institution's information
-3. Modify color scheme in `css/styles.css` (primary color variables)
-4. Update contact information in the footer section
-5. Replace gallery images with your own photos
 
 ## Browser Support
 
@@ -110,7 +54,7 @@ To customize the website for your institution:
 
 ## Credits
 
-- Design and Development: [Your Name]
+- Design and Development: [Saqib Ayaz]
 - Images: Placeholder images from [Unsplash](https://unsplash.com)
 - Icons: [Font Awesome](https://fontawesome.com)
 - Fonts: [Google Fonts](https://fonts.google.com)
@@ -123,5 +67,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Contact
 
 For any inquiries or support, please contact:
-- Email: your.email@example.com
-- Website: https://www.yourwebsite.com 
+- Email: ayazs4314@gmail.com
